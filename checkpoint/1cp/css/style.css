@@ -1,0 +1,75 @@
+body {
+    background-image: url(../img/fundo.jpg);
+    background-attachment: fixed;
+    background-size: cover  ;
+}
+
+h1 {
+    font-family: Arial;
+    font-size: 30px;
+    color: #F44C2D;
+}
+
+h2 {
+    font-family: Arial;
+    font-size: 30px;
+    color: #F44C2D;
+}
+
+h3 {
+    font-family: Tahoma;
+    font-size: 24px;
+    color: #003399;
+}
+
+p {
+    font-family: Arial;
+    font-size: 18px;
+    color: #003399;
+    margin: 4px;
+}
+
+.alinhamento {
+    text-align: center;
+}
+
+#container {
+    width: 900px;
+    border: 4px solid blue;
+    margin: auto;
+    background-color: rgb(255 255 255 / 25%);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#banner {
+    position: relative;
+    margin: auto;
+}
+
+#quadro {
+    margin-bottom: 60px;
+}
+
+#arvore {
+    margin-bottom: 30px;
+}
+
+.personagem {
+    border: 4px solid blue;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+hr {
+    border-color: blue;
+}
+
+li {
+    list-style: none;
+    margin: 4px;
+}
+
+li a:hover {
+    color: yellow;
+}
