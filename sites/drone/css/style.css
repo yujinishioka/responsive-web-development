@@ -1,0 +1,128 @@
+@font-face {
+    font-family: Lobster;
+    src: url(../fonts/Lobster_Two/LobsterTwo-Regular.ttf);
+}
+
+@font-face {
+    font-family: PermanentMaker;
+    src: url(../fonts/Permanent_Marker/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+body {
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);
+    background-color: rgb(33, 33, 33);
+}
+
+.container {
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+h1 {
+    font-family: Lobster;
+    font-size: 4em;
+}
+
+p {
+    margin: 10px 0;
+    text-shadow: 3px 4px 5px black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.lead {
+    margin-bottom: 14px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.btn {
+    padding: 6px 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-vermelho {
+    color: rgb(255, 255, 255);
+    background-color: rgb(70, 111, 182, 0.7);
+    border-color: black;
+}
+
+.btn-vermelho:hover {
+    background-color: rgba(119, 40, 137, 0.8);
+}
+
+.header-site {
+    padding-top: 300px;
+    padding-bottom: 500px;
+
+    background-image: url(../img/bg.jpg);
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-site h1 {
+    font-family: PermanentMaker;
+    font-size: 5em;
+    text-shadow: 6px 7px 11px black;
+}
+
+.conteudo-site {
+    padding: 200px 0 700px 0;
+    margin: auto;
+}
+
+.conteudo-site .container {
+    width: 1200px;
+    margin: auto;
+}
+
+.box {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    float: left;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: all ease-in 300ms;
+}
+
+.box:hover {
+    background-color: rgb(86, 47, 176);
+    transform: scale(1.1, 1.1);
+}
+
+.thumbnail {
+    overflow: hidden;
+}
+
+.thumbnail img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

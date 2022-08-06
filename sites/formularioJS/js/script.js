@@ -27,16 +27,6 @@ function validar2(){
 	document.form.submit();
 }
 
-function voltar(){
-	//history.back();
-	document.form.action='index.html';
-	document.form.submit();
-}
-
-function limparDados(){
-	document.form.reset()
-}
-
 function validar3(){
 	var msgE = "Favor preencher o campo";
 
@@ -64,18 +54,14 @@ function validar3(){
 	document.form.submit();
 }
 
-function mensagem(msg, campo){
-	console.log(campo);
+function voltar(){
+	//history.back();
+	document.form.action='index.html';
+	document.form.submit();
+}
 
-	document.getElementById(campo).focus();
-
-	var campoMSG = document.getElementById('msgErro');
-	campoMSG.style.display="block";
-
-	campoMSG.innerHTML= msg +' ' + campo +'!';
-	campoMSG.style.backgroundColor = 'red';
-	campoMSG.style.textAlign = 'center';
-	campoMSG.style.height = '60px';
+function limparDados(){
+	document.form.reset()
 }
 
 function mudarCor(qualCor) {
@@ -90,9 +76,7 @@ function mudarCor(qualCor) {
 			campoFormulario.style.backgroundColor = 'blue';
 			campoCabecalho.style.backgroundColor = '#172068';
 			campoAcao.style.backgroundColor = '#172068';
-			for(var i = 0 ; i < contador; i++) {
-				camposInputs.children[i].children[1].style.backgroundColor = '#172068'
-			};
+			mudaCorInput('#172068')
 			break;
 
 		case 3:
@@ -166,7 +150,6 @@ function mudarCor(qualCor){
 		campoCabecalho.style.backgroundColor = '#666';
 		campoAcao.style.backgroundColor = '#666';
 
-		//mudaCorInput('#666');
 		for(var i = 0 ; i < contador; i++) {
 			camposInputs.children[i].children[1].style.backgroundColor = '#666'
 		};
@@ -174,8 +157,22 @@ function mudarCor(qualCor){
 }
 */
 
-function mudaCorInput(qualeACor){
-		for(var i = 0 ; i < contador; i++) {
-			camposInputs.children[i].children[1].style.backgroundColor = qualeACor
-		};
+function mudaCorInput(cor){
+	for(var i = 0 ; i < contador; i++) {
+		camposInputs.children[i].children[1].style.backgroundColor = cor
+	};
+}
+
+function mensagem(msg, campo){
+	console.log(campo);
+
+	document.getElementById(campo).focus();
+
+	var campoMSG = document.getElementById('msgErro');
+	campoMSG.style.display="block";
+
+	campoMSG.innerHTML= msg +' ' + campo +'!';
+	campoMSG.style.backgroundColor = 'red';
+	campoMSG.style.textAlign = 'center';
+	campoMSG.style.height = '60px';
 }
