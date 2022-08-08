@@ -1,0 +1,22 @@
+.container {
+    width: 90%;
+}
+
+.btn {
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(204,204,204);
+}
+
+.btn:hover {
+    color: rgb(255,255,255);
+    background-color: rgb(0,0,0);
+}
+
+.header .btn {
+    margin-top: 20px;
+}
+
+h1 {
+    margin: 20px 0;
+}
