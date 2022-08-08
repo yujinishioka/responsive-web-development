@@ -32,6 +32,11 @@ h1 {
     font-size: 4em;
 }
 
+h2 {
+    font-family: Lobster;
+    font-size: 3em;
+}
+
 p {
     margin: 10px 0;
     text-shadow: 3px 4px 5px black;
@@ -65,14 +70,21 @@ a {
     border-radius: 4px;
 }
 
-.btn-vermelho {
+.btn-azul {
     color: rgb(255, 255, 255);
     background-color: rgb(70, 111, 182, 0.7);
     border-color: black;
 }
 
-.btn-vermelho:hover {
-    background-color: rgba(119, 40, 137, 0.8);
+.btn-azul:hover {
+    background-color: rgba(40, 58, 137, 0.8);
+}
+
+.header-site .btn-azul {
+    width: 90px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 20px;
 }
 
 .header-site {
@@ -93,7 +105,7 @@ a {
 }
 
 .conteudo-site {
-    padding: 200px 0 700px 0;
+    padding: 200px 0 500px 0;
     margin: auto;
 }
 
@@ -125,4 +137,36 @@ a {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.img-site {
+    background-image: url(../img/bg2.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-top: 300px;
+    padding-bottom: 300px;
+}
+
+.img-site .media {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-site .media .lado-a, .img-site .media .lado-b {
+    background-color: rgba(65, 133, 150, 0.4);
+}
+
+.img-site .media .lado-b {
+    width: 855px;
+    margin-bottom: 40px;
+}
+
+.footer-site {
+    vertical-align: bottom;
+    background-color: rgb(255,255,00,0.6);
 }
