@@ -1,0 +1,12 @@
+@font-face {
+    font-family: Aboreto;
+    src: url(../fonts/Aboreto/Aboreto-Regular.ttf);
+}
+
+.titulo {
+    font-family: Aboreto;
+    font-size: 40px;
+    width: 100%;
+    padding-bottom: 8px;
+    background-color: rgba(134, 56, 134, 0.781);
+}

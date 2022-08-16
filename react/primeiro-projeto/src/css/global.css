@@ -1,3 +1,14 @@
+@font-face {
+    font-family: Aboreto;
+    src: url(../fonts/Aboreto/Aboreto-Regular.ttf);
+}
+
+body {
+    font: Aboreto;
+    font-size: 22px;
+    background-color: rgba(47, 47, 116, 0.774);
+}
+
 .centered {
     display: flex;
     align-items: center;
