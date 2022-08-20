@@ -1,0 +1,14 @@
+h2 {
+    margin-top: 48px;
+}
+
+ul li {
+    margin-bottom: 16px;
+}
+
+.img-1 {
+    margin: auto;
+    width: 1107px;
+    height: 658px;
+    border: 6px solid black;
+}
