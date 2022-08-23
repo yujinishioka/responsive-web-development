@@ -1,0 +1,15 @@
+footer {
+    width: 100%;
+    margin-right: 10px;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    color: rgb(0, 0, 0);
+    background-color: orange;
+    margin-top: 50px;
+}
+
+footer p {
+    text-align: end;
+    margin-right: 40px;
+}

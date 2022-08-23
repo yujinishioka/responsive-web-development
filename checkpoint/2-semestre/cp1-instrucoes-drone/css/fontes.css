@@ -1,0 +1,15 @@
+@font-face{
+	font-family: 'Roboto-Light';
+	src: url(../Fontes/Roboto/Roboto-Light.ttf);
+}
+
+
+@font-face{
+	font-family: 'LexendExa-VariableFont_wght';
+	src:  url('../Fontes/Lexend_Exa/LexendExa-VariableFont_wght.ttf');
+}
+
+@font-face{
+	font-family: 'PermanentMarker-Regular';
+	src:  url('../Fontes/Permanent_Marker/PermanentMarker-Regular.ttf ');
+}

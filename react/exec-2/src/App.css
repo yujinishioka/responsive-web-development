@@ -1,0 +1,17 @@
+h1 {
+    color: darkblue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.paragrafo-2 {
+    margin-left: 50px;
+    color: orange;
+    font-size: 2em;
+}
+
+.componentTeste {
+    margin-left: 50px;
+    color: red;
+    font-size: 2em;
+}
