@@ -1,0 +1,15 @@
+.header-site{
+	background-image: url(../img/bg.jpg);
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #fff;
+	padding-top: 300px;
+	padding-bottom: 500px;
+}
+
+.header-site h1{
+	color: tomato;
+	text-shadow: 5px 5px 10px #000;
+}
