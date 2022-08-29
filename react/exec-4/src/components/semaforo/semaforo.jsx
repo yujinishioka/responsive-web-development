@@ -1,27 +1,43 @@
-import {useState} from 'react'
+import './semaforo.css'
 
-function Semaforo(props) {
-    let cor = 'verde'
-    let msg = 'Siga'
+function Semaforo() {
 
-    function mudarCor(e) {
-        if (cor === 'verde') {
-            cor = 'amarelo';
-            msg = 'Atenção';
-        } else if (cor === 'amarelo') {
-            cor = 'vermelho';
-            msg = 'Pare';
+    let Props = {
+        cor: 'verde',
+        msg: 'siga',
+        verde: true,
+        amarelo: false,
+        vermelho: false,
+    }
+
+    function mudarCor(Props) {
+        if (Props.cor === 'verde') {
+            Props.cor = 'amarelo';
+            Props.msg = 'atenção';
+            Props.verde = false
+            Props.amarelo = true
+        } else if (Props.cor === 'amarelo') {
+            Props.cor = 'vermelho';
+            Props.msg = 'pare';
+            Props.amarelo = false
+            Props.vermelho = true
         } else {
-            cor = 'verde';
-            msg = 'Siga';
+            Props.cor = 'verde';
+            Props.msg = 'siga';
+            Props.verde = true
+            Props.vermelho = false
         }
     }
 
     return (
-        <div>
-            <button onClick={mudarCor}>Semaforo</button>
-            <div>
-                <p>{msg}</p>
+        <div className='container'>
+            <div className='box'>
+                <div className='left'>
+                    <button className={`${Props.verde ? 'verde' : ''} ${Props.amarelo ? 'amarelo' : ''} ${Props.vermelho ? 'vermelho' : ''}`}  onClick={mudarCor(Props)}>Semaforo</button>
+                </div>
+                <div className='right'>
+                    <p className='mensagem'>{Props.msg}</p>
+                </div>
             </div>
         </div>
     )
