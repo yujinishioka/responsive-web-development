@@ -5,7 +5,7 @@ import Styled from 'styled-components'
 const DivMenu = Styled.div`
     color: white;
     background: #ADD8E6;
-    width: 100%;
+    width: 95%;
     padding: 16px 0;
     margin: 16px auto;
     border-radius: 8px;

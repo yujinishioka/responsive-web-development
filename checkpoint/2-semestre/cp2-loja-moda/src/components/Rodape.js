@@ -3,7 +3,7 @@ import Styled from 'styled-components'
 const DivRodape = Styled.div`
     color: white;
     background: #ADD8E6;
-    width: 100%;
+    width: 95%;
     margin: 16px auto;
     padding: 4px 0;
     border-radius: 8px;
