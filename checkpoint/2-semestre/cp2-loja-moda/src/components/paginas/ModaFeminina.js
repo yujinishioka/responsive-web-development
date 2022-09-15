@@ -16,7 +16,7 @@ const DivModaFeminina = Styled.div`
         border-radius: 50px 50px 0 0;
     }
 
-    h1, p {
+    h1, h2, p {
         color: red;
     }
 
@@ -35,14 +35,56 @@ const DivModaFeminina = Styled.div`
         height: 4px;
         border-radius: 6px;
     }
+
+    .box-bg {
+        width: 90%;
+        margin: 30px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .box-sm {
+        width: 350px;
+        margin: 30px 0;
+        background-color: rgb(255, 255, 255, 0.4);
+        transition: all ease-in 300ms;
+    }
+
+    .box-sm:hover {
+        background-color: rgb(255, 255, 255, 0.7);
+        transform: scale(1.1, 1.1);
+    }
 `
 
 const ModaFeminina = () => {
     return (
         <DivModaFeminina>
-            <img src={banner} className='banner'/>
+            <img src={banner} className='banner' alt='banner'/>
             <hr/>
             <h1>Moda Feminina</h1>
+            <hr/>
+
+            <div className='box-bg'>
+                <div className='box-sm'>
+                    <img className='img-prod img-1' alt=''/>
+                    <h2>Nome</h2>
+                    <p>descricao</p>
+                </div>
+                
+                <div className='box-sm'>
+                    <img className='img-prod img-1' alt=''/>
+                    <h2>Nome</h2>
+                    <p>descricao</p>
+                </div>
+
+                <div className='box-sm'>
+                    <img className='img-prod img-1' alt=''/>
+                    <h2>Nome</h2>
+                    <p>descricao</p>
+                </div>
+            </div>
+
             <hr/>
         </DivModaFeminina>
     )

@@ -15,7 +15,7 @@ const DivRodape = Styled.div`
 const Rodape = () => {
     return (
         <DivRodape>
-            <p>fiap - 2022</p>
+            <p>moda ora - 2022</p>
         </DivRodape>
     )
 }
