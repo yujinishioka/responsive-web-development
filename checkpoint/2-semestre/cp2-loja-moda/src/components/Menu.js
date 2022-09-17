@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Styled from 'styled-components'
-import icon from '../images/icon-192.png'
 
 const DivMenu = Styled.div`
     color: white;
@@ -23,9 +22,12 @@ const DivMenu = Styled.div`
 
     .icon {
         width: 90px;
+        height: 90px;
         position: absolute;
         margin-top: 10px;
         margin-left: 30px;
+        background-size: cover;
+        background-image: url('/images/icon-192.png')
     }
 
     h1 {
@@ -59,7 +61,7 @@ const Menu = () => {
     return (
         <DivMenu>
             <div className='banner-icon'>
-                <img src={icon} className='icon' alt=''/>
+                <div className='icon'></div>
                 <h1>moda ora</h1>
             </div>
             

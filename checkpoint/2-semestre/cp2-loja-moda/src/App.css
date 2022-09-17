@@ -12,3 +12,8 @@
     font-family: "Penna";
     src: url("./fonts/Penna/penna.ttf");
 }
+
+@font-face {
+    font-family: "Amatic";
+    src: url("./fonts/Amatic_SC/AmaticSC-Regular.ttf");
+}

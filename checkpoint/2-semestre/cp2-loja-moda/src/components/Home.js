@@ -1,6 +1,5 @@
 import React from 'react'
 import Styled from 'styled-components'
-import ora from '../images/ora-ora.png'
 
 const DivHome = Styled.div`
     background-color: #ffb;
@@ -29,18 +28,13 @@ const DivHome = Styled.div`
         border-radius: 6px;
     }
 
-    .box-image {
+    .img-1 {
         width: 800px;
         height: 450px;
         margin: 0 auto;
-        border: 8px solid white;
-        border-radius: 8px
-    }
-
-    .image-1 {
-        width: 800px;
-        height: 450px;
         border-radius: 50px;
+        background-size: cover;
+        background-image: url('/images/ora.png');
     }
 `
 
@@ -51,9 +45,7 @@ const Home = () => {
             <p>As roupas mais da oras.</p>
             <hr/>
             <p>VEM PARA</p>
-            <div className='box-image ora'>
-                <img src={ora} className='image-1' alt="Ora"/>
-            </div>
+            <div className='img-1'></div>
             <hr/>
         </DivHome>
     )

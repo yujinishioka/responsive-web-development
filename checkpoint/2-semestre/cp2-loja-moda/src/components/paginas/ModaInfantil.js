@@ -1,5 +1,4 @@
 import Styled from 'styled-components'
-import banner from '../../images/josuke-banner2.png'
 
 const DivModaInfantil = Styled.div`
     background-color: #0169e4;
@@ -14,10 +13,16 @@ const DivModaInfantil = Styled.div`
         width:100%;
         height:563px;
         border-radius: 50px 50px 0 0;
+        background-size: cover;
+        background-image: url('/images/josuke-banner2.png');
     }
 
-    h1{
+    h1, h2 {
         color: Orange;
+    }
+
+    h3, p {
+        color: black;
     }
 
     h1 {
@@ -25,8 +30,13 @@ const DivModaInfantil = Styled.div`
         padding-top: 32px;
     }
 
-    h2, p {
-        color: black;
+    h2 {
+        font-size: 60px;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-size: 30px
     }
 
     p {
@@ -47,49 +57,97 @@ const DivModaInfantil = Styled.div`
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
-
-    .box-sm {
+    
+    .box-md {
         width: 350px;
         margin: 30px 0;
         background-color: rgb(255, 255, 255, 0.4);
+    }
+    
+    .box-md, .box-sm {
+        border-radius: 12px;
         transition: all ease-in 300ms;
     }
 
-    .box-sm:hover {
+    .box-md:hover, .box-sm:hover {
         background-color: rgb(255, 255, 255, 0.7);
         transform: scale(1.1, 1.1);
+    }
+
+    .box-sm {
+        width: 150px;
+        margin: 20px 10px;
+        background-color: rgb(255, 255, 255, 0.4);
+    }
+
+    .img-cat {
+        width: 120px;
+        height: 120px;
+        margin: 10px auto 0 auto;
+        border: 1px solid white;
+        border-radius: 12px;
+        background-image: url('/images/categorias-icon.png');
     }
 `
 
 const ModaInfantil = () => {
     return (
         <DivModaInfantil>
-            <img src={banner} className='banner' alt='banner'/>
+            <div className='banner'></div>
 
             <hr/>
             <h1>Moda Infantil</h1>
             <hr/>
 
+            <h2>Categorias</h2>
             <div className='box-bg'>
                 <div className='box-sm'>
-                    <img className='img-prod img-1' alt=''/>
-                    <h2>Nome</h2>
-                    <p>descricao</p>
+                    <div className='img-cat img-1'></div>
+                    <h3>Top</h3>
                 </div>
                 
                 <div className='box-sm'>
-                    <img className='img-prod img-1' alt=''/>
-                    <h2>Nome</h2>
-                    <p>descricao</p>
+                    <img className='img-cat img-2' alt=''/>
+                    <h3>Calças</h3>
                 </div>
 
                 <div className='box-sm'>
-                    <img className='img-prod img-1' alt=''/>
-                    <h2>Nome</h2>
+                    <img className='img-cat img-3' alt=''/>
+                    <h3>Intimos</h3>
+                </div>
+            </div>
+            <hr/>
+
+            <h2>HOT</h2>
+            <div className='box-bg'>
+                <div className='box-md'>
+                    <img className='img-prod img-4' alt=''/>
+                    <h3>Nome</h3>
+                    <p>descricao</p>
+                </div>
+                
+                <div className='box-md'>
+                    <img className='img-prod img-5' alt=''/>
+                    <h3>Nome</h3>
                     <p>descricao</p>
                 </div>
             </div>
+            <hr/>
 
+            <h2>Promos</h2>
+            <div className='box-bg'>
+                <div className='box-md'>
+                    <img className='img-prod img-6' alt=''/>
+                    <h3>Nome</h3>
+                    <p>descricao</p>
+                </div>
+                
+                <div className='box-md'>
+                    <img className='img-prod img-7' alt=''/>
+                    <h3>Nome</h3>
+                    <p>descricao</p>
+                </div>
+            </div>
             <hr/>
         </DivModaInfantil>
     )
