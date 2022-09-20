@@ -15,11 +15,11 @@ const DivModaMasculina = Styled.div`
         height:563px;
         border-radius: 50px 50px 0 0;
         background-size: cover;
-        background-image: url('/images/jojo.png')
+        background-image: url('/images/banner-masculina.png')
     }
 
     h1, h2, h3, p {
-        color: Orange;
+        color: black;
     }
 
     h1 {
@@ -34,6 +34,15 @@ const DivModaMasculina = Styled.div`
     p {
         font-size: 20px;
     }
+
+    p span {
+        font-weight: bold;
+    }
+
+    .riscado {
+        text-decoration: line-through;
+    }
+
 
     hr {
         background-color: #ADD8E6;
@@ -80,6 +89,51 @@ const DivModaMasculina = Styled.div`
         border-radius: 12px;
         background-image: url('/images/categorias-icon.png');
     }
+
+    .img-prod {
+        width: 200px;
+        height: 350px;
+        margin: 20px auto 0 auto;
+        border: 1px solid white;
+        border-radius: 12px;
+    }
+
+    .img-1 {
+        background-position: 1009px 156px;
+    }
+
+    .img-2 {
+        background-position: 1009px 684px;
+    }
+
+    .img-3 {
+        background-position: 813px 342px;
+    }
+
+    .img-4 {
+        background-size: cover;
+        background-position: 230px 0;
+        background-image: url('images/camisa-frente.webp')
+    }
+
+    .img-4:hover, .img-5:hover {
+        transition: all ease-in 200ms;
+    }
+
+    .img-4:hover {
+        background-image: url('images/camisa-costa.webp')
+    }
+
+    .img-5 {
+        background-size: cover;
+        background-position: 230px 0;
+        background-image: url('images/calca-frente.webp')
+    }
+
+    .img-5:hover {
+        background-image: url('images/calca-costa.webp')
+    }
+
 `
 
 const ModaMasculina = () => {
@@ -113,14 +167,16 @@ const ModaMasculina = () => {
             <div className='box-bg'>
                 <div className='box-md'>
                     <img className='img-prod img-4' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <h3>Camisa</h3>
+                    <p>Manta Formal</p>
+                    <p><span>R$ 88,90</span></p>
                 </div>
                 
                 <div className='box-md'>
                     <img className='img-prod img-5' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <h3>Calça</h3>
+                    <p>Bolso Expressão</p>
+                    <p><span>R$ 99,90</span></p>
                 </div>
             </div>
             <hr/>
@@ -128,15 +184,17 @@ const ModaMasculina = () => {
             <h2>Promoções</h2>
             <div className='box-bg'>
                 <div className='box-md'>
-                    <img className='img-prod img-6' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <img className='img-prod img-4' alt=''/>
+                    <h3>Camisa</h3>
+                    <p>Manta Formal</p>
+                    <p>de <span className='riscado'>R$ 99,90</span> por <span>R$ 89,90</span></p>
                 </div>
                 
                 <div className='box-md'>
-                    <img className='img-prod img-7' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <img className='img-prod img-5' alt=''/>
+                    <h3>Calça</h3>
+                    <p>Bolso Expressão</p>
+                    <p>de <span className='riscado'>R$ 115,90</span> por <span>R$ 99,90</span></p>
                 </div>
             </div>
             <hr/>

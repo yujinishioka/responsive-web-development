@@ -9,7 +9,7 @@ const DivHome = Styled.div`
     border-radius: 6px;
     text-align: center;
 
-    h1, p {
+    h1, h2, p {
         color: Orange;
     }
 
@@ -28,13 +28,13 @@ const DivHome = Styled.div`
         border-radius: 6px;
     }
 
-    .img-1 {
+    .banner {
         width: 800px;
         height: 450px;
         margin: 0 auto;
         border-radius: 50px;
         background-size: cover;
-        background-image: url('/images/ora.png');
+        background-image: url('/images/banner-home.png');
     }
 `
 
@@ -45,7 +45,9 @@ const Home = () => {
             <p>As roupas mais da oras.</p>
             <hr/>
             <p>VEM PARA</p>
-            <div className='img-1'></div>
+            <div className='banner'></div>
+            <hr/>
+            <h2>Trabalho de Responsive - Professor: Renato Bortolin</h2>
             <hr/>
         </DivHome>
     )

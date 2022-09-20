@@ -10,19 +10,15 @@ const DivModaFeminina = Styled.div`
     text-align: center;
 
     .banner {
-        border-radius: 50px 50px 0 0;
-    }
-
-    .banner-feminina {
         width:100%;
         height:563px;
         border-radius: 50px 50px 0 0;
         background-size: cover;
-        background-image: url('/images/jolyne-banner1.png')
+        background-image: url('/images/banner-feminina.png')
     }
 
     h1, h2, h3, p {
-        color: red;
+        color: #5c1daa;
     }
 
     h1 {
@@ -36,6 +32,14 @@ const DivModaFeminina = Styled.div`
 
     p {
         font-size: 20px;
+    }
+
+    p span {
+        font-weight: bold;
+    }
+
+    .riscado {
+        text-decoration: line-through;
     }
 
     hr {
@@ -121,14 +125,50 @@ const DivModaFeminina = Styled.div`
         background-position: 230px 0;
         background-image: url('images/vestido-frente.webp')
     }
+
+    .img-7:hover, .img-8:hover, .img-9:hover, .img-10:hover {
+        transition: all ease-in 200ms;
+    }
+
+    .img-7:hover {
+        background-image: url('images/vestido-costa.webp')
+    }
+
+    .img-8 {
+        background-size: cover;
+        background-position: 230px 0;
+        background-image: url('images/regata-frente.webp')
+    }
+
+    .img-8:hover {
+        background-image: url('images/regata-costa.webp')
+    }
+
+    .img-9 {
+        background-size: cover;
+        background-position: 230px 0;
+        background-image: url('images/saia-frente.webp')
+    }
+
+    .img-9:hover {
+        background-image: url('images/saia-costa.webp')
+    }
+
+    .img-10 {
+        background-size: cover;
+        background-position: 230px 0;
+        background-image: url('images/lenco-1.webp')
+    }
+
+    .img-10:hover {
+        background-image: url('images/lenco-2.webp')
+    }
 `
 
 const ModaFeminina = () => {
     return (
         <DivModaFeminina>
-            <div className='banner'>
-                <div className='banner-feminina'></div>
-            </div>
+            <div className='banner'></div>
             <hr/>
             <h1>Moda Feminina</h1>
             <hr/>
@@ -171,26 +211,33 @@ const ModaFeminina = () => {
             <div className='box-bg'>
                 <div className='box-md'>
                     <img className='img-prod img-7' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <h3>Vestido Elegante</h3>
+                    <p>Vinho</p>
+                    <p>Abertura lateral simples</p>
+                    <p><span>R$ 60,90</span></p>
                 </div>
                 
                 <div className='box-md'>
                     <img className='img-prod img-8' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <h3>Regata</h3>
+                    <p>Preta</p>
+                    <p>Inserção de malha</p>
+                    <p><span>R$ 29,90</span></p>
                 </div>
 
                 <div className='box-md'>
                     <img className='img-prod img-9' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <h3>Shorts</h3>
+                    <p>Nó</p>
+                    <p>Manta ocasional</p>
+                    <p><span>R$ 51,90</span></p>
                 </div>
                 
                 <div className='box-md'>
                     <img className='img-prod img-10' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <h3>Lenço estampado</h3>
+                    <p>Xadrez</p>
+                    <p><span>R$ 26,90</span></p>
                 </div>
             </div>
             <hr/>
@@ -198,21 +245,26 @@ const ModaFeminina = () => {
             <h2>Promoções</h2>
             <div className='box-bg'>
                 <div className='box-md'>
-                    <img className='img-prod img-11' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <img className='img-prod img-8' alt=''/>
+                    <h3>Regata</h3>
+                    <p>Preta</p>
+                    <p>Inserção de malha</p>
+                    <p>de <span className='riscado'>R$ 35,90</span> por <span>R$ 29,90</span></p>
                 </div>
                 
                 <div className='box-md'>
-                    <img className='img-prod img-12' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <img className='img-prod img-9' alt=''/>
+                    <h3>Shorts</h3>
+                    <p>Nó</p>
+                    <p>Manta ocasional</p>
+                    <p>de <span className='riscado'>R$ 60,90</span> por <span>R$ 51,90</span></p>
                 </div>
 
                 <div className='box-md'>
-                    <img className='img-prod img-13' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <img className='img-prod img-10' alt=''/>
+                    <h3>Lenço estampado</h3>
+                    <p>Xadrez</p>
+                    <p>de <span className='riscado'>R$ 31,90</span> por <span>R$ 26,90</span></p>
                 </div>
             </div>
             <hr/>

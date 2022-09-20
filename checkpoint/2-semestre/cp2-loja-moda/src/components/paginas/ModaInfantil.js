@@ -14,14 +14,15 @@ const DivModaInfantil = Styled.div`
         height:563px;
         border-radius: 50px 50px 0 0;
         background-size: cover;
-        background-image: url('/images/josuke-banner2.png');
+        background-image: url('/images/banner-infantil.png');
     }
 
-    h1, h2 {
-        color: Orange;
+    h1, h2, h3 {
+        color: white;
     }
 
-    h3, p {
+    p {
+        font-family: Arial;
         color: black;
     }
 
@@ -42,6 +43,15 @@ const DivModaInfantil = Styled.div`
     p {
         font-size: 20px;
     }
+
+    p span {
+        font-weight: bold;
+    }
+
+    .riscado {
+        text-decoration: line-through;
+    }
+
     
     hr {
         background-color: #ADD8E6;
@@ -88,6 +98,50 @@ const DivModaInfantil = Styled.div`
         border-radius: 12px;
         background-image: url('/images/categorias-icon.png');
     }
+
+    .img-prod {
+        width: 200px;
+        height: 350px;
+        margin: 20px auto 0 auto;
+        border: 1px solid white;
+        border-radius: 12px;
+    }
+
+    .img-1 {
+        background-position: 1009px 156px;
+    }
+
+    .img-2 {
+        background-position: 1009px 684px;
+    }
+
+    .img-3 {
+        background-position: 813px 342px;
+    }
+
+    .img-4 {
+        background-size: cover;
+        background-position: 230px 0;
+        background-image: url('images/desenho-animado-frente.webp')
+    }
+
+    .img-4:hover, .img-8:hover, .img-9:hover, .img-10:hover {
+        transition: all ease-in 200ms;
+    }
+
+    .img-4:hover {
+        background-image: url('images/desenho-animado-costa.webp')
+    }
+
+    .img-5 {
+        background-size: cover;
+        background-position: 230px 0;
+        background-image: url('images/meninas-junto.webp')
+    }
+
+    .img-5:hover {
+        background-image: url('images/meninas-separado.webp')
+    }
 `
 
 const ModaInfantil = () => {
@@ -122,14 +176,16 @@ const ModaInfantil = () => {
             <div className='box-bg'>
                 <div className='box-md'>
                     <img className='img-prod img-4' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <h3>Desenho Animado</h3>
+                    <p>2 peças</p>
+                    <p><span>R$ 75,90</span></p>
                 </div>
                 
                 <div className='box-md'>
                     <img className='img-prod img-5' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <h3>Regata & Saia Pinafore</h3>
+                    <p>Malhado</p>
+                    <p><span>R$ 67,90</span></p>
                 </div>
             </div>
             <hr/>
@@ -137,15 +193,17 @@ const ModaInfantil = () => {
             <h2>Promos</h2>
             <div className='box-bg'>
                 <div className='box-md'>
-                    <img className='img-prod img-6' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <img className='img-prod img-4' alt=''/>
+                    <h3>Desenho Animado</h3>
+                    <p>2 peças</p>
+                    <p>de <span className='riscado'>R$ 89,90</span> por <span>R$ 75,90</span></p>
                 </div>
                 
                 <div className='box-md'>
-                    <img className='img-prod img-7' alt=''/>
-                    <h3>Nome</h3>
-                    <p>descricao</p>
+                    <img className='img-prod img-5' alt=''/>
+                    <h3>Regata & Saia Pinafore</h3>
+                    <p>Malhado</p>
+                    <p>de <span className='riscado'>R$ 71,90</span> por <span>R$ 67,90</span></p>
                 </div>
             </div>
             <hr/>
