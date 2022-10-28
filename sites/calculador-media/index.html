@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculador de Media</title>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <h1>Calculador de Média</h1>
+            <div>Calcula a Média e o quanto precisa tirar para atingir a Média.</div>
+        </div>
+
+        <hr />
+
+        <form>
+            <h2>1º Semestre</h2>
+            <div class="box">
+                <label>Checkpoint 1</label>
+                <input type="number" id="cp1" min="0" max="10" step="1" required />
+            </div>
+            <div class="box">
+                <label>Checkpoint 2</label>
+                <input type="number" id="cp2" min="0" max="10" step="1" required />
+            </div>
+            <div class="box">
+                <label>Checkpoint 3</label>
+                <input type="number" id="cp3" min="0" max="10" step="1" required />
+            </div>
+
+            <div class="box">
+                <label>Sprint 1</label>
+                <input type="number" id="s1" min="0" max="10" step="1" required />
+            </div>
+            <div class="box">
+                <label>Sprint 2</label>
+                <input type="number" id="s2" min="0" max="10" step="1" required />
+            </div>
+
+            <div class="box">
+                <label>Global Solution</label>
+                <input type="number" id="gs1" min="0" max="10" step="1" required />
+            </div>
+
+            <h2>2º Semestre</h2>
+            <div class="box">
+                <label>Checkpoint 4</label>
+                <input type="number" id="cp4" min="0" max="10" step="1" required />
+            </div>
+            <div class="box">
+                <label>Checkpoint 5</label>
+                <input type="number" id="cp5" min="0" max="10" step="1" required />
+            </div>
+            <div class="box">
+                <label>Checkpoint 6</label>
+                <input type="number" id="cp6" min="0" max="10" step="1" required />
+            </div>
+
+            <div class="box">
+                <label>Sprint 3</label>
+                <input type="number" id="s3" min="0" max="10" step="1" required />
+            </div>
+            <div class="box">
+                <label>Sprint 4</label>
+                <input type="number" id="s4" min="0" max="10" step="1" required />
+            </div>
+
+            <div class="box">
+                <label>Global Solution</label>
+                <input type="number" id="gs2" min="0" max="10" step="1" required />
+            </div>
+        </form>
+
+        <div class="estado">
+            <h2>Estado</h2>
+            <div class="box-estado"></div>
+        </div>
+    </div>
+    <script src="js/funcoes.js"></script>
+</body>
+</html>

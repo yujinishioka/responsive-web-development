@@ -1,0 +1,45 @@
+body {
+    background-color: #5d686e;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    min-width: 600px;
+    margin: 32px auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: center;
+    color: #d61453;
+    background-color: #121414;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+form {
+    margin: 24px;
+}
+
+.banner {
+    margin-bottom: 12px;
+}
+
+.box {
+    margin: 8px;
+}
+
+.box-estado {
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    border: 1px solid #d61453;
+}
