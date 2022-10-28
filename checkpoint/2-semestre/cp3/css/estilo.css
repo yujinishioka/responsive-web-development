@@ -202,9 +202,10 @@ footer .social-icones a:hover{
 	
 	.menu ul{ 
 		width: auto;
+		list-style-type: none;
 	}
 
-	.menu li{padding: 0;}
+	.menu li{list-style: none; padding: 0;}
 	
 	.menu li a{font-size: 2em; color: #fff; padding: 1.5% 3%; font-weight: bold;}
 	
