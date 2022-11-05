@@ -1,0 +1,18 @@
+package br.com.fiap.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.fiap.to.VagaTO;
+
+public class VagaDAO {
+	
+	private static List<VagaTO> listaDeVagas;
+
+	public VagaDAO() {
+		if(listaDeVagas == null) {
+			listaDeVagas = new ArrayList<VagaTO>();
+		}
+	}
+
+}

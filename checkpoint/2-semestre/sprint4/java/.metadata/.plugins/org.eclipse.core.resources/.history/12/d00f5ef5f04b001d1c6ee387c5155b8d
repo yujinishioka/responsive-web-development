@@ -1,0 +1,24 @@
+package br.com.fiap.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.fiap.to.VagaTO;
+
+public class VagaDAO {
+	
+	private static List<VagaTO> listaDeVagas;
+
+	public VagaDAO() {
+		if(listaDeVagas == null) {
+			listaDeVagas = new ArrayList<VagaTO>();
+			
+			VagaTO pto = new VagaTO();
+			pto.setCodigo(1);
+			pto.setTitulo("Desenvolvedor Front-End");
+			pto.setNumeroDeVagas(2);
+			pto.setDescricao("Para est[a vaga necessita de conhecimento básico de react.js ");
+		}
+	}
+
+}

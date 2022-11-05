@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\REI DELAS\Desktop\Sprint\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+740494300.index
+1176091577.index
+1270019288.index
+3847553826.index
+2802695634.index
+2381152225.index
