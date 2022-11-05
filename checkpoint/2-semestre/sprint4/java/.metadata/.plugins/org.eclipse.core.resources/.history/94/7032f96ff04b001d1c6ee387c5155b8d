@@ -1,9 +1,0 @@
-package br.com.fiap.dao;
-
-public class VagaDAO {
-
-	public VagaDAO() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

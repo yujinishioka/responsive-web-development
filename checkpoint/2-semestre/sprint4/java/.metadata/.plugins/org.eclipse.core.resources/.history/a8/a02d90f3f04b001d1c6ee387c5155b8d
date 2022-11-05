@@ -1,9 +1,0 @@
-package br.com.fiap.to;
-
-public class VagaTO {
-
-	public VagaTO() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

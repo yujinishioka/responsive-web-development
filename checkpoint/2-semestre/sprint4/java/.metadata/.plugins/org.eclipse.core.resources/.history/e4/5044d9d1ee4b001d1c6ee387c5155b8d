@@ -1,9 +1,0 @@
-package br.com.fiap.resource;
-
-public class VagaResource {
-
-	public VagaResource() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
