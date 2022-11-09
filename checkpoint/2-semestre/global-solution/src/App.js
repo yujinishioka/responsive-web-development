@@ -70,6 +70,10 @@ const AppStyle = styled.div`
     width: 80px;
   }
 
+  .btn-logout {
+    margin-left: 10px;
+  }
+
   .btn:hover {
     opacity: 0.3;
   }

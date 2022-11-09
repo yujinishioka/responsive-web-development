@@ -47,7 +47,7 @@ const Main = () => {
             </Block>
 
             <Link to="/">
-                <button className='btn btn-sair'>Sair</button>
+                <button className='btn btn-sair'>Logout</button>
             </Link>
         </MainStyle>
     )

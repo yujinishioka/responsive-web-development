@@ -6,18 +6,16 @@ import {
 } from "../../style/pages/visualizar";
 
 const Motorista = () => {
-    let items = [['Leandro', 'Silva', '00000000000', '000.000.000-00', '00.000.000-0', 20], ['Leandro', 'Silva', '00000000000', '000.000.000-00', '00.000.000-0', 20]]
+    let items = [{idMotorista: 1, nome: 'Leandro', sobrenome: 'da Silva', cnh: '00000000000', cpf: '000.000.000-00', rg: '00.000.000-0', idade: 20}, {idMotorista: 2, nome: 'Leandro', sobrenome: 'da Silva', cnh: '00000000000', cpf: '000.000.000-00', rg: '00.000.000-0', idade: 20}]
 
     let itemList = items.map((item, index) => {
-        return <>
-            <Field key={index}>
-                <p>Nome: {item[0]} {item[1]}</p>
-                <p>CNH: {item[2]}</p>
-                <p>CPF: {item[3]}</p>
-                <p>RG: {item[4]}</p>
-                <p>Idade: {item[5]}</p>
-            </Field>
-        </>
+        return <Field key={index}>
+            <p>Nome: {item.nome} {item.sobrenome}</p>
+            <p>CNH: {item.cnh}</p>
+            <p>CPF: {item.cpf}</p>
+            <p>RG: {item.rg}</p>
+            <p>Idade: {item.idade}</p>
+        </Field>
     })
 
     return (
@@ -30,6 +28,10 @@ const Motorista = () => {
 
             <Link to="/main">
                 <button className='btn btn-voltar'>Voltar</button>
+            </Link>
+
+            <Link to="/">
+                <button className='btn btn-logout'>Logout</button>
             </Link>
         </VisualizarStyle>
     )
