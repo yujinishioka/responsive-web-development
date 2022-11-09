@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
-import { NovoVeiculoStyle } from "../../style/pages/novoVeiculo"
+import { NovoStyle } from '../../style/pages/novo';
 
 const NovoVeiculo = () => {
     return (
-        <NovoVeiculoStyle className="container">
+        <NovoStyle className="container">
             <h2>Novo Veículo</h2>
 
             <Link to="/main">
             <button className='btn btn-voltar'>Voltar</button>
             </Link>
-        </NovoVeiculoStyle>
+        </NovoStyle>
     )
 }
 

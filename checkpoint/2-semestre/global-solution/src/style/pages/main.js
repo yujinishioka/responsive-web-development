@@ -3,7 +3,7 @@ import colors from '../colors';
 
 export const MainStyle = styled.div`
     width: 600px;
-    min-height: 435px;
+    min-height: 490px;
     text-align: center;
 
     h2 {

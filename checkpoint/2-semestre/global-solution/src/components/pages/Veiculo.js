@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
-import { VeiculoStyle } from '../../style/pages/veiculo.js'
+import { VisualizarStyle } from '../../style/pages/visualizar.js';
 
 const Veiculo = () => {
     return (
-        <VeiculoStyle className='container'>
+        <VisualizarStyle className='container'>
             <h2>Veiculo</h2>
 
             <Link to="/main">
             <button className='btn btn-voltar'>Voltar</button>
             </Link>
-        </VeiculoStyle>
+        </VisualizarStyle>
     )
 }
 

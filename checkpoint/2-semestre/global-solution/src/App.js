@@ -15,8 +15,10 @@ import Registro from './components/pages/Registro';
 import Main from './components/pages/Main';
 import Empresa from './components/pages/Empresa';
 import Veiculo from './components/pages/Veiculo';
+import Motorista from './components/pages/Motorista';
 import NovaEmpresa from './components/pages/NovaEmpresa';
 import NovoVeiculo from './components/pages/NovoVeiculo';
+import NovoMotorista from './components/pages/NovoMotorista';
 
 function App() {
   return (
@@ -29,8 +31,10 @@ function App() {
           <Route path='/main' element={<Main />} />
           <Route path='/main/empresa' element={<Empresa />} />
           <Route path='/main/veiculo' element={<Veiculo />} />
+          <Route path='/main/motorista' element={<Motorista />} />
           <Route path='/main/empresa/nova' element={<NovaEmpresa />} />
           <Route path='/main/veiculo/novo' element={<NovoVeiculo />} />
+          <Route path='/main/motorista/novo' element={<NovoMotorista />} />
         </Routes>
       </Router>
       <Footer/>
@@ -40,6 +44,7 @@ function App() {
 
 const AppStyle = styled.div`
   min-height: 100vh;
+  font-family: Roboto, sans-serif;
   color: #FFFFFF;
   background: #595955;
 

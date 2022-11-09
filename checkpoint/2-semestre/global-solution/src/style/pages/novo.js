@@ -1,17 +1,13 @@
 import styled from 'styled-components';
 import colors from '../colors';
 
-export const RegistroStyle = styled.div`
+export const NovoStyle = styled.div`
     width: 600px;
     min-height: 490px;
     text-align: center;
-    
-    p {
-        font-size: 22px;
-    }
 
     h2 {
-        margin-top: 16px;
+        margin-top: 20px;
         font-size: 32px;
         text-transform: uppercase;
         color: ${colors.primaryColor};
@@ -21,19 +17,17 @@ export const RegistroStyle = styled.div`
         margin-top: 26px;
         display: flex;
         flex-direction: column;
-        
+
         label {
             margin: 12px;
-        }
-        
-        .btn-registrar {
-            width: 175px;
-        }
-    }
 
-    .login {
-        margin-top: 16px;
-        text-decoration: underline;
-        color: ${colors.primaryColor}
+            input {
+                margin-left: 6px;
+            }
+        }
+
+        .btn-adicionar {
+            width: 110px;
+        }
     }
 `

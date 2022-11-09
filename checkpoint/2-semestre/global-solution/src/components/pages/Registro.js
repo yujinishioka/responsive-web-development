@@ -6,25 +6,25 @@ const Registro = () => {
     return (
         <RegistroStyle className='container'>
             <h2>Registre-se!</h2>
-            <form>
+            <form autoComplete='off'>
                 <p>e-mail:</p>
                 <label>
-                    <input type="email" name="emailNovo" value='' required />
+                    <input type="email" name="emailNovo" autoComplete='off' required />
                 </label>
 
                 <p>confirme seu e-mail:</p>
                 <label>
-                    <input type="email" name="emailNovoConfirma" value='' required />
+                    <input type="email" name="emailNovoConfirma" autoComplete='off' required />
                 </label>
 
                 <p>senha:</p>
                 <label>
-                    <input type="password" name="senhaNova" value='' required />
+                    <input type="password" name="senhaNova" autoComplete='new-password' required />
                 </label>
 
                 <p>confirme sua senha:</p>
                 <label>
-                    <input type="password" name="senhaNovaConfirma" value='' required />
+                    <input type="password" name="senhaNovaConfirma" autoComplete='new-password' required />
                 </label>
 
                 <button className='btn btn-registrar' type='button'>Registrar-se</button>

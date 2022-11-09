@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import colors from '../colors';
 
-export const EmpresaStyle = styled.div`
+export const VisualizarStyle = styled.div`
     width: 600px;
-    min-height: 435px;
+    min-height: 490px;
     text-align: center;
 
     h2 {

@@ -34,6 +34,18 @@ const Main = () => {
                 </Link>
             </Block>
 
+            <Block>
+                <h3>Motorista</h3>
+                <p>Consultar seus Motoristas</p>
+                <Link to="motorista">
+                    <button className='btn btn-lg'>Ver Motoristas</button>
+                </Link>
+                <p>Novo Motorista</p>
+                <Link to="motorista/novo">
+                    <button className='btn btn-lg'>Add +</button>
+                </Link>
+            </Block>
+
             <Link to="/">
                 <button className='btn btn-sair'>Sair</button>
             </Link>

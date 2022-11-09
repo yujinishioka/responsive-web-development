@@ -2,8 +2,8 @@ import { HeaderStyle } from '../style/header';
 
 const Header = () => {
     return (
-        <HeaderStyle className="container">
-            <h1>Global Car</h1>
+        <HeaderStyle>
+            <h1>Tech Mobility</h1>
         </HeaderStyle>
     )
 }
