@@ -32,7 +32,6 @@ const NovoVeiculo = () => {
             },
             body: JSON.stringify(novo)
         }).then(() => {
-            console.log()
             window.location = "/main/veiculo"
         })
     }
@@ -43,7 +42,6 @@ const NovoVeiculo = () => {
                 .then((resp) => {
                     return(resp.json())
                 }).then(data => {
-                    console.log(data);
                     setNovo(data)
                 })
         }

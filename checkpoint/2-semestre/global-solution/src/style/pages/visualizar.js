@@ -5,12 +5,19 @@ export const VisualizarStyle = styled.div`
     width: 600px;
     min-height: 435px;
     text-align: center;
+    position: relative;
 
     h2 {
         margin-top: 20px;
         font-size: 32px;
         text-transform: uppercase;
         color: ${colors.primaryColor};
+    }
+
+    .actions {
+        position: absolute;
+        top: -10px;
+        right: 0px;
     }
 `
 

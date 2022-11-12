@@ -16,6 +16,8 @@ const Veiculo = () => {
             .then(response => response.json())
             .then(resp => {
                 setVeiculos(resp)
+            }).catch((error) => {
+                console.log("Erro: ", error)
             })
     })
 

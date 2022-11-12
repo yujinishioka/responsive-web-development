@@ -28,13 +28,41 @@ export const LoginStyle = styled.div`
         margin-top: 26px;
         display: flex;
         flex-direction: column;
-    }
-    
-    label {
-        margin: 12px;
-    }
 
-    .btn-login {
-        width: 120px;
-    }
+        label {
+            margin: 12px;
+            width: 100%;
+            display: block;
+
+            span {
+                display: block;
+                width: 100px;
+                text-transform: uppercase;
+                color: ${colors.white};
+                font-size: 14px;
+                font-weight: bold;
+                text-align: right;
+                float: left;
+                padding-top: 13px;
+            }
+
+            .input_text{
+                padding: 10px 20px;
+                font-size: 15px;
+                background-color: ${colors.darkGrey};
+                color: ${colors.white};
+                width: 300px;
+                margin-right: 40px;
+            }
+        }
+
+        .btn-login {
+            width: 120px;
+            color: ${colors.greyBackground};
+            text-decoration: none;
+    
+            span {
+                font-size: 14px;
+            }
+        }
 `
