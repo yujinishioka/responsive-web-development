@@ -1,45 +1,78 @@
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useParams, Link } from 'react-router-dom';
+
 import { NovoStyle } from '../../style/pages/novo';
 
 const NovaEmpresa = () => {
-    function salvar() {
-        let cnpj = document.getElementById("cnpjForm").value;
-        let razao = document.getElementById("razaoSocialForm").value;
-        let nomeFantasia = document.getElementById("nomeFantasiaForm").value;
-        let dataFundacao = document.getElementById("dataFundacaoForm").value;
 
-        if (!cnpj || !razao || !nomeFantasia || !dataFundacao ) {
-            alert("Preencha todos os campos para adicionar uma nova empresa.");
-            return;
-        } else {
-            let novaEmpresa = {cnpj: cnpj, razaoSocial: razao, nomeFantasia: nomeFantasia, dataFundacao: dataFundacao}
-            console.log(novaEmpresa)
-            return;
-        }
+    let { id } = useParams()
+    let metodo = "post"
+
+    if (id) {
+        metodo = "put"
     }
+
+    const [novo, setNovo] = useState({
+        cnpj: "",
+        razaoSocial: "",
+        nomeFantasia: "",
+        dataFundacao: ""
+    })
+
+    const handleChange = e => {
+        setNovo({...novo, [e.target.name]:e.target.value})
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        fetch(`http://localhost:8080/GlobalSolution/rest/empresa/${ id ? id : "" }`,{
+            method: metodo,
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(novo)
+        }).then(() => {
+            window.location = "/main/empresa"
+        })
+    }
+
+    useEffect(() => {
+        if(id) {
+            fetch(`http://localhost:8080/GlobalSolution/rest/empresa/${id}`)
+            .then((resp) => {
+                return(resp.json())
+            }).then(data => {
+                setNovo(data)
+            })
+        }
+    },[id])
 
     return (
         <NovoStyle className="container">
             <h2>Nova Empresa</h2>
 
-            <form>
-                <label> CNPJ:
-                    <input type="text" id="cnpjForm" placeholder='00.000.000/0000-00' required />
+            <form onSubmit={handleSubmit}>
+                <label> 
+                    <span>CNPJ:</span>
+                    <input type="text" name="cnpj" value={novo.cnpj} placeholder='00.000.000/0000-00' required onChange={handleChange} className="input_text" />
                 </label>
 
-                <label> Razão Social:
-                    <input type="text" id="razaoSocialForm" placeholder='A' required />
+                <label> 
+                    <span>Razão Social:</span>
+                    <input type="text" name="razaoSocial" value={novo.razaoSocial} placeholder='A' required onChange={handleChange} className="input_text" />
                 </label>
 
-                <label> Nome Fantasia:
-                    <input type="text" id="nomeFantasiaForm" placeholder='Empresa Feliz' required />
+                <label>
+                    <span>Nome Fantasia:</span>
+                    <input type="text" name="nomeFantasia" value={novo.nomeFantasia} placeholder='Empresa Feliz' required onChange={handleChange} className="input_text" />
                 </label>
 
-                <label> Data Fundação:
-                    <input type="text" id="dataFundacaoForm" placeholder='01/01/2022' required />
+                <label>
+                    <span>Data Fundação:</span>
+                    <input type="text" name="dataFundacao" value={novo.dataFundacao} placeholder='AAAA-MM-DD' required onChange={handleChange} className="input_text" />
                 </label>
 
-                <button className='btn btn-adicionar' type='button' onClick={() => salvar()}>Adicionar</button>
+                <button className='btn btn-adicionar'>{id ? "Salvar" : "Adicionar"}</button>
             </form>
 
             <hr/>

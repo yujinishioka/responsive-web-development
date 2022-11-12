@@ -1,29 +1,60 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+
 import { 
     VisualizarStyle, 
     Items, 
     Field, 
 } from "../../style/pages/visualizar";
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
 const Motorista = () => {
-    let items = [{idMotorista: 1, nome: 'Leandro', sobrenome: 'da Silva', cnh: '00000000000', cpf: '000.000.000-00', rg: '00.000.000-0', idade: 20}, {idMotorista: 2, nome: 'Leandro', sobrenome: 'da Silva', cnh: '00000000000', cpf: '000.000.000-00', rg: '00.000.000-0', idade: 20}]
 
-    let itemList = items.map((item, index) => {
-        return <Field key={index}>
-            <p>Nome: {item.nome} {item.sobrenome}</p>
-            <p>CNH: {item.cnh}</p>
-            <p>CPF: {item.cpf}</p>
-            <p>RG: {item.rg}</p>
-            <p>Idade: {item.idade}</p>
-        </Field>
-    })
+    const [motoristas, setMotoristas] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8080/GlobalSolution/rest/motorista')
+            .then(response => response.json())
+            .then(resp => {
+                setMotoristas(resp)
+            }).catch((error) => {
+                console.log("Erro:", error)
+            })
+    }, [])
+
+    const handleDelete = (id) => {
+        fetch(`http://localhost:8080/GlobalSolution/rest/motorista/${id}`,{
+            method: "delete"
+        }).then(() => {
+            window.location = "/main/motorista"
+        }).catch((error) => {
+            console.log("Erro: ", error)
+        })
+    }
 
     return (
         <VisualizarStyle className='container'>
             <h2>Motorista</h2>
 
             <Items>
-                {itemList}
+                {motoristas.map(motorista => {
+                    return (
+                        <Field key={motorista.idMotorista}>
+                            <p><span>Nome:</span> {motorista.nome} {motorista.sobrenome}</p>
+                            <p><span>CNH:</span> {motorista.cnh}</p>
+                            <p><span>CPF:</span> {motorista.cpf}</p>
+                            <p><span>RG:</span> {motorista.rg}</p>
+                            <p><span>Idade:</span> {motorista.idade}</p>
+
+                            <div className='opcoes'>
+                                <div className='btn icon'>
+                                    <Link to={`editar/${motorista.idMotorista}`} className="link"><FaEdit/></Link>
+                                </div>
+                                <button className='btn icon' onClick={handleDelete.bind(this, motorista.idMotorista)}><FaTrash /></button>
+                            </div>
+                        </Field>
+                    )
+                })}
             </Items>
 
             <Link to="/main">

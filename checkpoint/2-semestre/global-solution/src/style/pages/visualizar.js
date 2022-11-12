@@ -3,7 +3,7 @@ import colors from '../colors';
 
 export const VisualizarStyle = styled.div`
     width: 600px;
-    min-height: 490px;
+    min-height: 435px;
     text-align: center;
 
     h2 {
@@ -26,6 +26,25 @@ export const Field = styled.div`
     border-radius: 8px;
 
     p {
-        color: ${colors.primaryColor}
+        color: ${colors.primaryColor};
+        margin: 10px;
+
+        span {
+            color: ${colors.white};
+        }
+    }
+
+    .opcoes {
+        width: 100px;
+        display: flex;
+        margin: auto;
+
+        .link {
+            color: ${colors.greyBackground};
+        }
+
+        button {
+            cursor: pointer;
+        }
     }
 `

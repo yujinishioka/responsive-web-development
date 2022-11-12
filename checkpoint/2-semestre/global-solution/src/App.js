@@ -33,8 +33,11 @@ function App() {
           <Route path='/main/veiculo' element={<Veiculo />} />
           <Route path='/main/motorista' element={<Motorista />} />
           <Route path='/main/empresa/nova' element={<NovaEmpresa />} />
+          <Route path='/main/empresa/editar/:id' element={<NovaEmpresa />} />
           <Route path='/main/veiculo/novo' element={<NovoVeiculo />} />
+          <Route path='/main/veiculo/editar/:id' element={<NovoVeiculo />} />
           <Route path='/main/motorista/novo' element={<NovoMotorista />} />
+          <Route path='/main/motorista/editar/:id' element={<NovoMotorista />} />
         </Routes>
       </Router>
       <Footer/>
@@ -64,6 +67,10 @@ const AppStyle = styled.div`
     background: ${colors.primaryColor};
     border: 1px solid #FFFFFF;
     border-radius: 8px;
+  }
+
+  .icon {
+    width: 40px;
   }
 
   .btn-voltar {

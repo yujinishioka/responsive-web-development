@@ -1,55 +1,91 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, Link } from 'react-router-dom';
+
 import { NovoStyle } from "../../style/pages/novo";
 
 const NovoMotorista = () => {
-    function salvar() {
-        let nome = document.getElementById("nomeForm").value;
-        let sobrenome = document.getElementById("sobrenomeForm").value;
-        let cnh = document.getElementById("cnhForm").value;
-        let cpf = document.getElementById("cpfForm").value;
-        let rg = document.getElementById("rgForm").value;
-        let idade = document.getElementById("idadeForm").value;
 
-        if (!nome || !sobrenome || !cnh || !cpf || !rg || !idade) {
-            alert("Preencha todos os campos para adicionar um novo motorista.");
-            return;
-        } else {
-            let novoMotorista = {nome: nome, sobrenome: sobrenome, cnh: cnh, cpf: cpf, rg: rg, idade: idade}
-            console.log(novoMotorista)
-            return;
-        }
+    let { id } = useParams()
+    let metodo = "post"
+
+    const [novo, setNovo] = useState({
+        nome: "",
+        sobrenome: "",
+        cnh: "",
+        cpf: "",
+        rg: "",
+        idade: ""
+    })
+
+    if (id) {
+        metodo = "put"
     }
+
+    const handleChange = e => {
+        setNovo({...novo, [e.target.name]:e.target.value})
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        fetch(`http://localhost:8080/GlobalSolution/rest/motorista/${ id ? id : "" }`,{
+            method: metodo,
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(novo)
+        }).then(() => {
+            window.location = "/main/motorista"
+        })
+    }
+
+    useEffect(() => {
+        if(id) {
+            fetch(`http://localhost:8080/GlobalSolution/rest/motorista/${id}`)
+            .then((resp) => {
+                return(resp.json())
+            }).then(data => {
+                setNovo(data)
+            })
+        }
+    },[id])
+
 
     return (
         <NovoStyle className='container'>
             <h2>Novo Motorista</h2>
 
-            <form>
-                <label> Nome:
-                    <input type="text" id="nomeForm" placeholder='João' required />
+            <form onSubmit={handleSubmit}>
+                <label>
+                    <span>Nome:</span>
+                    <input type="text" name="nome" value={novo.nome} placeholder='João' required onChange={handleChange} className="input_text" />
                 </label>
 
-                <label> Sobrenome:
-                    <input type="text" id="sobrenomeForm" placeholder='da Silva' required />
+                <label>
+                    <span>Sobrenome:</span>
+                    <input type="text" name="sobrenome" value={novo.sobrenome} placeholder='da Silva' required onChange={handleChange} className="input_text" />
                 </label>
 
-                <label> CNH:
-                    <input type="text" id="cnhForm" placeholder='00000000000' required />
+                <label>
+                    <span>CNH:</span>
+                    <input type="text" name="cnh" value={novo.cnh} placeholder='00000000000' required onChange={handleChange} className="input_text" />
                 </label>
 
-                <label> CPF:
-                    <input type="text" id="cpfForm" placeholder='000.000.000-00' required />
+                <label>
+                    <span>CPF:</span>
+                    <input type="text" name="cpf" value={novo.cpf} placeholder='000.000.000-00' required onChange={handleChange} className="input_text" />
                 </label>
 
-                <label> RG:
-                    <input type="text" id="rgForm" placeholder='00.000.000-0' required />
+                <label>
+                    <span>RG:</span>
+                    <input type="text" name="rg" value={novo.rg} placeholder='00.000.000-0' required onChange={handleChange} className="input_text" />
                 </label>
 
-                <label> Idade:
-                    <input type="number" id="idadeForm" placeholder='20' required />
+                <label>
+                    <span>Idade:</span>
+                    <input type="number" name="idade" value={novo.idade} placeholder='20' required onChange={handleChange} className="input_text" />
                 </label>
 
-                <button className='btn btn-adicionar' type='button' onClick={() => salvar()}>Adicionar</button>
+                <button className='btn btn-adicionar'>{ id ? "Salvar" : "Adicionar" }</button>
             </form>
 
             <hr/>
